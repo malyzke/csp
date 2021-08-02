@@ -1,0 +1,117 @@
+.modalcall {
+  position: absolute;
+  min-width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background: #fff;
+  padding-top: 15px;
+
+  &-title {
+    position: relative;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 24px;
+  }
+
+  &-title::before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 40px;
+    top: 9px;
+    background-color: #41F6D7;
+    left: 0;
+  }
+
+  &-close {
+    margin-left: 10px;
+  }
+
+  &-title {
+    position: relative;
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 24px;
+  }
+
+  &-form {
+    text-align: center;
+  }
+
+  &-text {
+    margin: 15px auto;
+    width: 288px;
+    height: 64px;
+    font-size: 14px;
+    color: #B5B6BC;
+
+    a {
+      color: #FF3E79;
+      text-decoration: none;
+    }
+  }
+
+  &-submit {
+    display: block;
+    margin-left: auto;
+    padding-right: 40px;
+  }
+}
+
+
+.modalcall {
+  display: none;
+}
+
+.modalcall-show {
+  display: block;
+}
+
+
+//media 600-769px
+@media (min-width: 600px) and (max-width: 1000px) {
+
+  .modalcall {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 13px;
+    min-width: 370px;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
+      -23px 0 20px -23px rgba(0, 0, 0, .8),
+      23px 0 20px -23px rgba(0, 0, 0, .8),
+      0 0 40px rgba(0, 0, 0, .1) inset;
+  }
+}
+
+
+@media (min-width: 1001px) {
+
+    .modalcall {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 14;
+      min-width: 440px;
+      height: 100%;
+      background: #fff;
+      border: none;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
+        -23px 0 20px -23px rgba(0, 0, 0, .8),
+        23px 0 20px -23px rgba(0, 0, 0, .8),
+        0 0 40px rgba(0, 0, 0, .1);
+      border-radius: 8px;
+      border: none;
+
+      &-text {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../style/wrapper/wrapper.scss"
+    ],
+    "names": [],
+    "file": "wrapper.css"
+}

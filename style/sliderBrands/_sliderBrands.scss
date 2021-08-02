@@ -1,0 +1,30 @@
+.cart {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  // margin-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #fff;
+  width: 240px;
+  height: 72px;
+}
+.five {
+  display: none;
+}
+.show-cart {
+  display: flex;
+  justify-content: space-between;
+}
+.arrow {
+  width: 40px;
+  height: 40px;
+}
+
+
+@media (min-width: 1001px) {
+    .swiper-container {
+      display: none;
+    }
+
+}

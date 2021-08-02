@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;EAC7B,WAAW,EAAE,IAAI;EAEjB,YAAY,EAAE,IAAI;EAClB,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;CACb;;AACD,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,IAAI;CACd",
+    "sources": [
+        "../style/slider-brands/cart.scss"
+    ],
+    "names": [],
+    "file": "cart.css"
+}

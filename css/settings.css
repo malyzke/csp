@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'TTLakes-Regular', sans-serif;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  body {
+    position: relative;
+  }
+}
+
+@media (min-width: 1001px) {
+  body {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=settings.css.map */
