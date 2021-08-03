@@ -1,4 +1,4 @@
-
+import '../scss/style.scss';
 
 const toggleMenu = document.querySelector('.burger-toggle')
       menu = document.querySelector('.menu')

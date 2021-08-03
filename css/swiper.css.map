@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,yBAAyB,CAAC;EACxB,UAAU,EAAE,kBAAkB;CAC/B;;AAED,AAAA,kBAAkB,CAAC;EACjB,QAAQ,EAAE,mBAAmB;CAE9B;;AAGD,MAAM,EAAE,SAAS,EAAE,KAAK,OAAO,SAAS,EAAE,MAAM;EAE9C,AAAA,iBAAiB,CAAC;IAChB,OAAO,EAAE,IAAI;GACd",
-    "sources": [
-        "../style/swiper-style/swiper.scss"
-    ],
-    "names": [],
-    "file": "swiper.css"
-}
