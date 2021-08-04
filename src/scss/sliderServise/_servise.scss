@@ -74,7 +74,7 @@
   .cart-more {
     display: block;
     margin-top: 30px;
-    margin-left: 18px;
+    margin-left: 20px;
     padding-bottom: 20px;
   }
 
@@ -124,8 +124,11 @@
   font-size: $big;
   font-weight: bold;
   margin-top: 20px;
-  margin-left: 18px;
+  margin-left: 40px;
   padding-bottom: 20px;
+}
+.cart-icon {
+  padding-right:10px;
 }
 
 }

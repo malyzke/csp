@@ -80,11 +80,14 @@
     display: block;
     font-size: 16px;
     margin-top: 16px;
-    margin-left: 18px;
+    margin-left: 40px;
     font-weight: bold;
     &__item {
       margin-left: 0;
     }
+  }
+  .brands-icon {
+    padding-right: 10px;
   }
 
 }
