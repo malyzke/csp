@@ -423,7 +423,8 @@ button:hover {
 
 .transform,
 .transform-icon {
-  transform: rotate(180deg); }
+  transform: rotate(180deg);
+  margin-right: 10px; }
 
 .content-image {
   margin-top: 20px;
@@ -554,7 +555,7 @@ button:hover {
 @media (min-width: 1001px) {
   .brands-info {
     max-width: 1120px;
-    margin-top: 30px;
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -566,10 +567,12 @@ button:hover {
     display: block;
     font-size: 16px;
     margin-top: 16px;
-    margin-left: 18px;
+    margin-left: 40px;
     font-weight: bold; }
     .brands-more__item {
-      margin-left: 0; } }
+      margin-left: 0; }
+  .brands-icon {
+    padding-right: 10px; } }
 
 .cart {
   display: flex;
@@ -702,7 +705,7 @@ button:hover {
   .cart-more {
     display: block;
     margin-top: 30px;
-    margin-left: 18px;
+    margin-left: 20px;
     padding-bottom: 20px; }
   .three-cart {
     display: none; }
@@ -734,8 +737,10 @@ button:hover {
     font-size: 16px;
     font-weight: bold;
     margin-top: 20px;
-    margin-left: 18px;
-    padding-bottom: 20px; } }
+    margin-left: 40px;
+    padding-bottom: 20px; }
+  .cart-icon {
+    padding-right: 10px; } }
 
 .swiper-pagination-bullet {
   background: #7E7E82 !important; }
