@@ -1,84 +1,81 @@
 
 
+
+/* таблица*/
 .table {
   display: table;
-  // font-size: $small;
-  background: #fff;
-  border-radius: 5px;
-  margin-left: 30px;
-  max-width: 790px;
-  margin: 50px auto;
+  margin: 0 auto;
+  &-header {
+    display: table-header-group;
+    height: 64px;
+    line-height: 14px;
+    color: #7E7E82;
+  }
+  &-row {
+    display: table-row;
+    background-color: #FFFFFF;
+    height: 64px;
+    line-height: 16px;
+  }
+  &-cell {
+    display: table-cell;
+    padding: 0 16px;
+    vertical-align: middle;
+  }
+  &-services {
+    width: 348px;
+    border-top: 1px solid #EAEAEA;
+  }
+  &-prices {
+    width: 74px;
+    border-top: 1px solid #EAEAEA;
+  }
+  &-time {
+    width: 114px;
+    border-top: 1px solid #EAEAEA;
+  }
+  &-actions {
+    width: 119px;
+    border-top: 1px solid #EAEAEA;
+  }
+
 }
 
-.table-row {
-  display: table-row;
-  max-width: 720px;
-}
-
-.table-row::after {
-  content: '';
-  border-bottom: olive;
-}
-
-.table-cell {
-  display: table-cell;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.cell-one {
-  width: 310px;
-  padding-left: 8px;
-}
-
-.cell-two {
-  width: 75px;
-  margin-left: 20px;
-}
-
-.cell-three {
-  padding-left: 58px;
-}
-
-.cell-four {
-  padding-left: 180px;
-  width: 100px;
-}
-
-.hidd {
-  display: none;
-}
-
-.bg {
-  background-color: #F8F8F8;
-  color: #7E7E82;
-  max-width: 720px;
-  right: 0;
-}
-
-.gobuy {
-  vertical-align: middle;
-}
-
-.hidd {
-  display: none;
-}
+ @media (max-width:600px) {
+   .wrapper-table {
+     display: none;
+   }
+ }
 
 @media (min-width: 600px) and (max-width: 1000px) {
+  .table{
+    &-prices {
+      display: block;
+      padding: 0 24px;
+      display: none;
+    background-color: red;
+    }
 
-.table {
-  display: block;
-}
-
-.description {
-  max-width: 420px;
-}
-
+  }
 }
 
 @media (min-width: 1001px) {
-   .hidd {
-     display: block;
-     line-height: 24px;
-   }
+  .table {
+    &-time {
+      width: 205px;
+    }
+    &-cell {
+      padding: 0 24px;
+  }
+  &-prices {
+    padding: 0 32px;
+     width: 205px
+  }
+  &-services {
+    width: 480px;
+  }
 }
+}
+
+
+
