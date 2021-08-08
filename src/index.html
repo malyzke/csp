@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="style/fonts.css"> -->
   <link rel="stylesheet"  href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <title>CSP</title>
 </head>
 <body>
+
+
   <div class="wrapper">
  <header class="header">
    <div class="header-logo">
@@ -59,7 +59,7 @@
     </div>
      <div class="menu-items">
        <a href="#" class="menu-items__link">Ремонт техники</a>
-       <a href="#" class="menu-items__link">Услуги и сервисы</a>
+       <a href="#" class="menu-items__link link__active">Услуги и сервисы</a>
        <a href="#" class="menu-items__link">Корпоративным клиентам</a>
        <a href="#" class="menu-items__link">Продавцам техники</a>
        <a href="#" class="menu-items__link">Партнерам</a>
@@ -77,11 +77,11 @@
      <button class="menu-icons__profile btn">
        <img src="img/svg/profile.svg" alt="">
      </button>
-     <span class="menu-email">mail@cps.com</span>
-     <span class="menu-phone">8 800 890 8900</span>
+     <a class="menu-email">mail@cps.com</a>
+     <a class="menu-phone">8 800 890 8900</a>
      </div>
      <div class="menu-leng">
-       <button class="menu-leng__ru leng">RU</button>
+       <button class="menu-leng__ru leng leng--active">RU</button>
         <button class="menu-leng__en leng">EN</button>
          <button class="menu-leng__ch leng">CH</button>
      </div>
@@ -158,12 +158,12 @@
           </div>
       </div>
      <div class="nav-link">
-       <a href="#" class="nav-link__item">Ремонтируемые бренды</a>
-       <a href="#" class="nav-link__item">Ремонтируемые устройства</a>
-       <a href="#" class="nav-link__item">Цены на услуги</a>
-       <a href="#" class="nav-link__item">Адреса сервисных центров</a>
-       <a href="#" class="nav-link__item">Специальные цены</a>
-       <a href="#" class="nav-link__item">Отзывы</a>
+       <a href="#brands" class="nav-link__item nav-link__active" >Ремонтируемые бренды</a>
+       <a href="#servise-device" class="nav-link__item">Ремонтируемые устройства</a>
+       <a href="#price-total" class="nav-link__item">Цены на услуги</a>
+       <a href="#footer" class="nav-link__item">Адреса сервисных центров</a>
+       <a href="#price-total" class="nav-link__item">Специальные цены</a>
+       <a href="#footer" class="nav-link__item">Отзывы</a>
      </div>
    </nav>
    <div class="content">
@@ -190,7 +190,7 @@
    </section>
 
 
-   <section class="brands">
+   <section class="brands" id="brands">
      <h2 class="brands-title">Ремонт техники различных брендов</h2>
 
      <div class="swiper-container" data-mobile="false">
@@ -362,7 +362,7 @@
       </button>
 
  </section>
-      <section class="section-servise">
+      <section class="section-servise" id="servise-device">
         <h3 class="servise-title">Ремонт техники различных брендов</h3>
           <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -490,8 +490,13 @@
        <img class="cart-icon" src="img/svg/more.svg" alt="">
             <span class="cart-text">Показать всё</span>
       </button>
+
+
       </section>
-      <section class="price">
+
+
+
+      <section class="price" id="price-total">
         <h3 class="price-title">Цены на услуги</h3>
 
 
@@ -666,7 +671,7 @@
       </section>
 
       <footer >
-            <div class="footer">
+            <div class="footer" id="footer">
         <div class="year shrink"><a href=""></a>© 2019 CPS <br>
 Разработано командой Apesong </div>
         <div class="politic shrink">Политика конфиденциальности</div>
@@ -679,6 +684,5 @@
 
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<!-- <script src="js/index.js"></script> -->
 </body>
 </html>

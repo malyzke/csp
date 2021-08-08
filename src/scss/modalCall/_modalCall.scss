@@ -60,7 +60,9 @@
     padding-right: 40px;
   }
 }
-
+.noscroll {
+  overflow-y: hidden;
+}
 
 .modalcall {
   display: none;

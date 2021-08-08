@@ -16,6 +16,16 @@ const toggleMenu = document.querySelector('.burger-toggle'),
       feedbackBtn = document.querySelectorAll('.repair'),
       modalFeedback = document.querySelector('.modalfeedback'),
       closeModalFeedback =  document.querySelector('.modalfeedback-close'),
+      opacityMenu =  document.querySelector('.menu'),
+      opcityContent =  document.querySelector('.section-content'),
+      opacityBrands =  document.querySelector('.brands'),
+      opacityServise =  document.querySelector('.section-servise'),
+      opacityPrice =  document.querySelector('.price'),
+      opacityFooter = document.querySelector('.footer'),
+      opacityHeader =document.querySelector('.header'),
+      bodyScroll  = document.querySelector('body'),
+
+
 
       modalCallBtn = document.querySelectorAll('.search'),
       modalCall = document.querySelector('.modalcall'),
@@ -25,10 +35,27 @@ const toggleMenu = document.querySelector('.burger-toggle'),
          modalCallBtn.forEach( (item) => {
           item.addEventListener('click' , ()=>{
             modalCall.classList.toggle('modalcall-show')
+            opacityMenu.classList.toggle('opacity')
+            opcityContent.classList.toggle('opacity')
+            opacityBrands.classList.toggle('opacity')
+            opacityServise.classList.toggle('opacity')
+            opacityPrice.classList.toggle('opacity')
+            opacityFooter.classList.toggle('opacity')
+            opacityHeader.classList.toggle('opacity')
+            bodyScroll.classList.toggle('noscroll')
           }),
         closeModalCall.addEventListener('click', () => {
               modalCall.classList.remove('modalcall-show')
               menu.classList.remove('show')
+              opacityMenu.classList.remove('opacity')
+              opcityContent.classList.remove('opacity')
+              opacityBrands.classList.remove('opacity')
+              opacityServise.classList.remove('opacity')
+              opacityPrice.classList.remove('opacity')
+              opacityFooter.classList.remove('opacity')
+              opacityHeader.classList.remove('opacity')
+              bodyScroll.classList.remove('noscroll')
+
             })
        })
 
@@ -36,10 +63,29 @@ const toggleMenu = document.querySelector('.burger-toggle'),
        feedbackBtn.forEach( (item) => {
           item.addEventListener('click' , ()=>{
             modalFeedback.classList.toggle('modalfeedback-show')
+              opacityMenu.classList.toggle('opacity')
+              opcityContent.classList.toggle('opacity')
+              opacityBrands.classList.toggle('opacity')
+              opacityServise.classList.toggle('opacity')
+              opacityPrice.classList.toggle('opacity')
+              opacityFooter.classList.toggle('opacity')
+              opacityHeader.classList.toggle('opacity')
+              bodyScroll.classList.toggle('noscroll')
+
+
           }),
         closeModalFeedback.addEventListener('click', () => {
               modalFeedback.classList.remove('modalfeedback-show')
               menu.classList.remove('show')
+              menu.classList.remove('show')
+              opacityMenu.classList.remove('opacity')
+              opcityContent.classList.remove('opacity')
+              opacityBrands.classList.remove('opacity')
+              opacityServise.classList.remove('opacity')
+              opacityPrice.classList.remove('opacity')
+              opacityFooter.classList.remove('opacity')
+              opacityHeader.classList.remove('opacity')
+              bodyScroll.classList.remove('noscroll')
             })
        })
 
@@ -80,10 +126,14 @@ const toggleMenu = document.querySelector('.burger-toggle'),
 
        toggleMenu.addEventListener('click', ()=> {
         menu.classList.toggle('show')
+        bodyScroll.classList.toggle('noscroll')
+
       });
 
         closeMenu.addEventListener('click', () => {
           menu.classList.remove('show')
+          bodyScroll.classList.remove('noscroll')
+
       });
 
           contentBtn.addEventListener('click', ()=> {
