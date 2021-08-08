@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   position: relative;
   height: 88px;
@@ -57,10 +58,6 @@ body {
 
 button:hover {
   cursor: pointer; }
-
-.leng:focus,
-.leng:hover {
-  color: #FF3E79; }
 
 @media (min-width: 1001px) {
   .wrapper {
@@ -193,6 +190,9 @@ button:hover {
     margin-left: auto;
     padding-right: 40px; }
 
+.noscroll {
+  overflow-y: hidden; }
+
 .modalcall {
   display: none; }
 
@@ -238,7 +238,7 @@ button:hover {
   left: 0;
   top: 70px;
   right: 0;
-  height: 100%; }
+  height: 100vh; }
   .menu-title {
     display: flex;
     padding-top: 15px;
@@ -250,6 +250,7 @@ button:hover {
     padding-top: 30px;
     width: 320px; }
     .menu-items__link {
+      margin-top: 15px;
       margin-left: 15px;
       display: flex;
       text-decoration: none;
@@ -264,24 +265,31 @@ button:hover {
     display: flex;
     margin-top: 5px;
     font-size: 16px;
-    font-weight: 400; }
+    font-weight: 400;
+    cursor: pointer; }
   .menu-phone {
     display: flex;
     margin-top: 12px;
     font-size: 24px;
-    font-weight: bold; }
+    font-weight: bold;
+    cursor: pointer; }
   .menu-leng {
     margin-left: 24px; }
   .menu .leng {
     border: none;
     background: none;
     margin-top: 10px; }
+    .menu .leng--active {
+      color: #FF3E79; }
 
 .menu-items a:hover {
   color: #7E7E82; }
 
 .menu-items a:focus {
   color: #7E7E82; }
+
+.leng:focus {
+  color: #FF3E79; }
 
 .menu-items a:focus::before {
   position: relative;
@@ -303,13 +311,26 @@ button:hover {
 .menu-close {
   display: none; }
 
+.link__active {
+  color: #7E7E82; }
+
+.link__active::before {
+  position: relative;
+  content: '';
+  right: 10px;
+  top: -5px;
+  display: inline-block;
+  width: 4px;
+  height: 35px;
+  background-color: #41F6D7; }
+
 @media (min-width: 600px) and (max-width: 1000px) {
   .menu {
     position: absolute;
     left: 0;
     top: 0;
     z-index: 10;
-    height: 100%;
+    height: 90vh;
     width: 320px;
     background: #fff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset; }
@@ -328,6 +349,9 @@ button:hover {
     margin-left: 15px; }
   .search-hidden__now {
     display: none; } }
+
+.opacity {
+  opacity: .1; }
 
 @media (min-width: 1001px) {
   .menu {
@@ -371,8 +395,9 @@ button:hover {
   .section-content .feedback {
     display: none; }
   .section-content .nav-link {
+    margin-top: 10px;
     height: 40px;
-    padding: 05px;
+    padding: 10px 0px;
     margin-top: 20px;
     margin-left: 13px;
     overflow-x: scroll;
@@ -385,9 +410,14 @@ button:hover {
       font-size: 16px;
       color: #7E7E82;
       padding-left: 10px; }
-    .section-content .nav-link__item:hover, .section-content .nav-link__item:focus {
-      border: 3px solid #41F6D7;
-      border-radius: 2px; }
+    .section-content .nav-link__item:focus {
+      padding: 5px 10px;
+      border: 2px solid #41F6D7;
+      border-radius: 5px; }
+  .section-content .nav-link__active {
+    padding: 5px 10px;
+    border: 2px solid #41F6D7;
+    border-radius: 5px; }
   .section-content .content-text {
     font-size: 14px;
     margin-top: 32px;
@@ -483,6 +513,8 @@ button:hover {
     vertical-align: top; }
   .nav-feedback {
     padding-right: 30px; }
+    .nav-feedback-button {
+      margin-left: 20px; }
   .nav-check {
     font-weight: bold;
     padding-right: 5px;
@@ -514,7 +546,8 @@ button:hover {
     line-height: 24px;
     padding: 10px 0px 10px 18px;
     color: #7E7E82;
-    font-size: 16px; }
+    font-size: 16px;
+    background: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%); }
   .brands-more {
     padding-bottom: 30px;
     background: #F8F8F8; }
@@ -558,7 +591,6 @@ button:hover {
     margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 16px;
     margin-left: 10px;
     margin-right: 10px;
@@ -607,7 +639,8 @@ button:hover {
   font-size: 16px;
   color: #7E7E82;
   background-color: #fff;
-  padding: 15px 0px 15px 18px; }
+  padding: 15px 0px 15px 18px;
+  background: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%); }
 
 .price-cart {
   margin-left: 20px;
@@ -656,6 +689,7 @@ button:hover {
 .servise-title {
   font-size: 16px;
   color: #7E7E82;
+  background: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
   height: 52px;
   background-color: #fff;
   padding: 15px 0px 25px 18px; }
@@ -752,67 +786,58 @@ button:hover {
   .swiper-container {
     display: none; } }
 
+/* таблица*/
 .table {
   display: table;
-  background: #fff;
-  border-radius: 5px;
-  margin-left: 30px;
-  max-width: 790px;
-  margin: 50px auto; }
+  margin: 0 auto; }
+  .table-header {
+    display: table-header-group;
+    height: 64px;
+    line-height: 14px;
+    color: #7E7E82; }
+  .table-row {
+    display: table-row;
+    background-color: #FFFFFF;
+    height: 64px;
+    line-height: 16px; }
+  .table-cell {
+    display: table-cell;
+    padding: 0 16px;
+    vertical-align: middle; }
+  .table-services {
+    width: 348px;
+    border-top: 1px solid #EAEAEA; }
+  .table-prices {
+    width: 74px;
+    border-top: 1px solid #EAEAEA; }
+  .table-time {
+    width: 114px;
+    border-top: 1px solid #EAEAEA; }
+  .table-actions {
+    width: 119px;
+    border-top: 1px solid #EAEAEA; }
 
-.table-row {
-  display: table-row;
-  max-width: 720px; }
-
-.table-row::after {
-  content: '';
-  border-bottom: olive; }
-
-.table-cell {
-  display: table-cell;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-
-.cell-one {
-  width: 310px;
-  padding-left: 8px; }
-
-.cell-two {
-  width: 75px;
-  margin-left: 20px; }
-
-.cell-three {
-  padding-left: 58px; }
-
-.cell-four {
-  padding-left: 180px;
-  width: 100px; }
-
-.hidd {
-  display: none; }
-
-.bg {
-  background-color: #F8F8F8;
-  color: #7E7E82;
-  max-width: 720px;
-  right: 0; }
-
-.gobuy {
-  vertical-align: middle; }
-
-.hidd {
-  display: none; }
+@media (max-width: 600px) {
+  .wrapper-table {
+    display: none; } }
 
 @media (min-width: 600px) and (max-width: 1000px) {
-  .table {
-    display: block; }
-  .description {
-    max-width: 420px; } }
+  .table-prices {
+    display: block;
+    padding: 0 24px;
+    display: none;
+    background-color: red; } }
 
 @media (min-width: 1001px) {
-  .hidd {
-    display: block;
-    line-height: 24px; } }
+  .table-time {
+    width: 205px; }
+  .table-cell {
+    padding: 0 24px; }
+  .table-prices {
+    padding: 0 32px;
+    width: 205px; }
+  .table-services {
+    width: 480px; } }
 
 .footer {
   display: flex;
