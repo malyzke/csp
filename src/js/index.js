@@ -91,6 +91,7 @@ const toggleMenu = document.querySelector('.burger-toggle'),
 
 
 
+
       learnMore.addEventListener('click', () => {
          brandsBtn.classList.toggle('transform')
          for (let cart of cartFive) {
