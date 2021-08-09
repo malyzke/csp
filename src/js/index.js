@@ -2,9 +2,9 @@ import '../scss/style.scss';
 
 const toggleMenu = document.querySelector('.burger-toggle'),
       menu = document.querySelector('.menu'),
-      contentMore = document.querySelector('.text-more'),
+      contentMore = document.querySelectorAll('.text-more'),
       closeMenu = document.querySelector('.burger-close'),
-      contentBtn = document.querySelector('.content-text__more'),//btn
+      contentBtn = document.querySelectorAll('.content-text__more'),//btn
       learnMore = document.querySelector('.brands-more'), // btn
       cartFive = document.querySelectorAll('.five'),
       brandsBtn = document.querySelector('.brands-icon'),
@@ -27,13 +27,73 @@ const toggleMenu = document.querySelector('.burger-toggle'),
 
 
 
+
       modalCallBtn = document.querySelectorAll('.search'),
       modalCall = document.querySelector('.modalcall'),
-      closeModalCall = document.querySelector('.modalcall-close');
+      closeModalCall = document.querySelector('.modalcall-close'),
 
-  console.log(modalCallBtn)
+
+
+      //tabs
+      tabNavItem = document.querySelectorAll('.nav-link__item'),
+      tabContentItem = document.querySelectorAll('.content-text');
+
+
+      tabNavItem.forEach((elem) => {
+        elem.addEventListener('click', activeTab)
+      })
+
+      function activeTab() {
+      tabNavItem.forEach((elem) => {
+        elem.classList.remove('nav-link__active')
+      })
+      console.log(this)
+      this.classList.add('nav-link__active')
+      let tabName = this.getAttribute('data-tab')
+        activeTabContent(tabName);
+      }
+
+      function activeTabContent(tabName) {
+        tabContentItem.forEach( (item) => {
+          if(item.classList.contains(tabName)) {
+            item.classList.add('active')
+            item.classList.remove('hide-tab')
+          } else {
+            item.classList.remove('active')
+            item.classList.add('hide-tab')
+          }
+        })
+      }
+
+
+
+
+
+
+
+
+
+
+
+      let closeModal = () => {
+          modalCall.classList.remove('modalcall-show')
+          menu.classList.remove('show')
+          opacityMenu.classList.remove('opacity')
+          opcityContent.classList.remove('opacity')
+          opacityBrands.classList.remove('opacity')
+          opacityServise.classList.remove('opacity')
+          opacityPrice.classList.remove('opacity')
+          opacityFooter.classList.remove('opacity')
+          opacityHeader.classList.remove('opacity')
+          bodyScroll.classList.remove('noscroll')
+       }
+
+
+
+
          modalCallBtn.forEach( (item) => {
           item.addEventListener('click' , ()=>{
+
             modalCall.classList.toggle('modalcall-show')
             opacityMenu.classList.toggle('opacity')
             opcityContent.classList.toggle('opacity')
@@ -43,9 +103,48 @@ const toggleMenu = document.querySelector('.burger-toggle'),
             opacityFooter.classList.toggle('opacity')
             opacityHeader.classList.toggle('opacity')
             bodyScroll.classList.toggle('noscroll')
-          }),
-        closeModalCall.addEventListener('click', () => {
-              modalCall.classList.remove('modalcall-show')
+            let stop = false
+            let stopClose = ()=> {
+              stop = true
+            }
+            let windowClick = () => {
+              if(stop) {
+                stop = false
+                return
+              }
+              closeModal()
+              modalCall.removeEventListener('click', stopClose)
+              window.removeEventListener('click',windowClick)
+
+            }
+            setTimeout(() => {
+              modalCall.addEventListener('click', stopClose)
+            window.addEventListener('click',windowClick)
+            }, 0);
+
+          })
+
+
+        closeModalCall.addEventListener('click',closeModal)
+
+              // modalCall.classList.remove('modalcall-show')
+              // menu.classList.remove('show')
+              // opacityMenu.classList.remove('opacity')
+              // opcityContent.classList.remove('opacity')
+              // opacityBrands.classList.remove('opacity')
+              // opacityServise.classList.remove('opacity')
+              // opacityPrice.classList.remove('opacity')
+              // opacityFooter.classList.remove('opacity')
+              // opacityHeader.classList.remove('opacity')
+              // bodyScroll.classList.remove('noscroll')
+
+
+       })
+      
+
+       let closeModalFeedbackCB=  () => {
+              modalFeedback.classList.remove('modalfeedback-show')
+              menu.classList.remove('show')
               menu.classList.remove('show')
               opacityMenu.classList.remove('opacity')
               opcityContent.classList.remove('opacity')
@@ -55,10 +154,7 @@ const toggleMenu = document.querySelector('.burger-toggle'),
               opacityFooter.classList.remove('opacity')
               opacityHeader.classList.remove('opacity')
               bodyScroll.classList.remove('noscroll')
-
-            })
-       })
-
+            }
 
        feedbackBtn.forEach( (item) => {
           item.addEventListener('click' , ()=>{
@@ -71,22 +167,27 @@ const toggleMenu = document.querySelector('.burger-toggle'),
               opacityFooter.classList.toggle('opacity')
               opacityHeader.classList.toggle('opacity')
               bodyScroll.classList.toggle('noscroll')
+              let stop = false
+            let stopClose = ()=> {
+              stop = true
+            }
+            let windowClick = () => {
+              if(stop) {
+                stop = false
+                return
+              }
+              closeModalFeedbackCB()
+              modalFeedback.removeEventListener('click', stopClose)
+              window.removeEventListener('click',windowClick)
 
+            }
+            setTimeout(() => {
+              modalFeedback.addEventListener('click', stopClose)
+            window.addEventListener('click',windowClick)
+            }, 0);
 
           }),
-        closeModalFeedback.addEventListener('click', () => {
-              modalFeedback.classList.remove('modalfeedback-show')
-              menu.classList.remove('show')
-              menu.classList.remove('show')
-              opacityMenu.classList.remove('opacity')
-              opcityContent.classList.remove('opacity')
-              opacityBrands.classList.remove('opacity')
-              opacityServise.classList.remove('opacity')
-              opacityPrice.classList.remove('opacity')
-              opacityFooter.classList.remove('opacity')
-              opacityHeader.classList.remove('opacity')
-              bodyScroll.classList.remove('noscroll')
-            })
+        closeModalFeedback.addEventListener('click', closeModalFeedbackCB)
        })
 
 
@@ -137,20 +238,23 @@ const toggleMenu = document.querySelector('.burger-toggle'),
 
       });
 
-          contentBtn.addEventListener('click', ()=> {
-          contentMore.classList.toggle('show-text')
+        contentBtn.forEach((item) => {
+          item.addEventListener('click', () => {
           transformImg.classList.toggle('transform')
-           if (contentBtn.textContent === 'Скрыть') {
-            contentBtn.textContent = 'Показать всё'
-            contentBtn.prepend(transformImg)
+           if (item.textContent === 'Скрыть') {
+            item.textContent = 'Показать всё'
+            item.prepend(transformImg)
             } else {
-             contentBtn.textContent = 'Скрыть'
-                         contentBtn.prepend(transformImg)
-
-
+             item.textContent = 'Скрыть'
+              item.prepend(transformImg)
             }
+            contentMore.forEach((val) => {
+              val.classList.toggle('show-text')
+            })
+          })
+        })
 
-      });
+
 
 
 
