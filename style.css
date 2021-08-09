@@ -137,6 +137,7 @@ button:hover {
     z-index: 14;
     width: 440px;
     height: 100%;
+    margin-right: -100px;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1); }
     .modalfeedback-text {
@@ -218,6 +219,7 @@ button:hover {
     min-width: 440px;
     height: 100%;
     background: #fff;
+    margin-right: -100px;
     border: none;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -250,14 +252,15 @@ button:hover {
     padding-top: 30px;
     width: 320px; }
     .menu-items__link {
-      margin-top: 15px;
+      height: 30px;
       margin-left: 15px;
       display: flex;
       text-decoration: none;
       color: #000;
       margin-bottom: 15px;
       font-size: 16px;
-      color: #1B1C21; }
+      color: #1B1C21;
+      vertical-align: middle; }
   .menu-icons {
     margin-top: 10px;
     margin-left: 24px; }
@@ -282,24 +285,15 @@ button:hover {
     .menu .leng--active {
       color: #FF3E79; }
 
-.menu-items a:hover {
-  color: #7E7E82; }
-
-.menu-items a:focus {
-  color: #7E7E82; }
-
-.leng:focus {
+.leng:hover {
   color: #FF3E79; }
 
-.menu-items a:focus::before {
-  position: relative;
-  content: '';
-  right: 10px;
-  top: -5px;
-  display: inline-block;
-  width: 4px;
-  height: 35px;
-  background-color: #41F6D7; }
+.menu-items a:hover {
+  box-shadow: 0 0 3px 3px #ff3e79;
+  background-color: #FF3E79;
+  border-radius: 4px;
+  color: #FFFFFF;
+  outline: none; }
 
 .show {
   display: block;
@@ -385,7 +379,7 @@ button:hover {
   outline: none; }
 
 .section-content {
-  padding-top: 24px;
+  padding-top: 20px;
   background: #F8F8F8;
   min-width: 320px; }
   .section-content h1 {
@@ -414,10 +408,14 @@ button:hover {
       padding: 5px 10px;
       border: 2px solid #41F6D7;
       border-radius: 5px; }
+  .section-content .hide-tab {
+    display: none; }
   .section-content .nav-link__active {
     padding: 5px 10px;
     border: 2px solid #41F6D7;
     border-radius: 5px; }
+  .section-content .active {
+    display: block; }
   .section-content .content-text {
     font-size: 14px;
     margin-top: 32px;
@@ -523,6 +521,7 @@ button:hover {
   .section-content .nav-link {
     overflow-x: hidden; }
   .content {
+    padding-top: 20px;
     display: flex;
     justify-content: space-around;
     max-width: 1440px; }
@@ -614,7 +613,9 @@ button:hover {
   padding-right: 10px;
   background: #fff;
   width: 240px;
-  height: 72px; }
+  height: 72px;
+  padding-bottom: 25px;
+  align-items: center; }
 
 .five {
   display: none; }
