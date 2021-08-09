@@ -25,14 +25,9 @@ const toggleMenu = document.querySelector('.burger-toggle'),
       opacityHeader =document.querySelector('.header'),
       bodyScroll  = document.querySelector('body'),
 
-
-
-
       modalCallBtn = document.querySelectorAll('.search'),
       modalCall = document.querySelector('.modalcall'),
       closeModalCall = document.querySelector('.modalcall-close'),
-
-
 
       //tabs
       tabNavItem = document.querySelectorAll('.nav-link__item'),
@@ -65,16 +60,6 @@ const toggleMenu = document.querySelector('.burger-toggle'),
         })
       }
 
-
-
-
-
-
-
-
-
-
-
       let closeModal = () => {
           modalCall.classList.remove('modalcall-show')
           menu.classList.remove('show')
@@ -88,21 +73,7 @@ const toggleMenu = document.querySelector('.burger-toggle'),
           bodyScroll.classList.remove('noscroll')
        }
 
-
-
-
          modalCallBtn.forEach( (item) => {
-          item.addEventListener('click' , ()=>{
-
-            modalCall.classList.toggle('modalcall-show')
-            opacityMenu.classList.toggle('opacity')
-            opcityContent.classList.toggle('opacity')
-            opacityBrands.classList.toggle('opacity')
-            opacityServise.classList.toggle('opacity')
-            opacityPrice.classList.toggle('opacity')
-            opacityFooter.classList.toggle('opacity')
-            opacityHeader.classList.toggle('opacity')
-            bodyScroll.classList.toggle('noscroll')
             let stop = false
             let stopClose = ()=> {
               stop = true
@@ -117,32 +88,29 @@ const toggleMenu = document.querySelector('.burger-toggle'),
               window.removeEventListener('click',windowClick)
 
             }
+          item.addEventListener('click' , ()=>{
+
+            modalCall.classList.toggle('modalcall-show')
+            opacityMenu.classList.toggle('opacity')
+            opcityContent.classList.toggle('opacity')
+            opacityBrands.classList.toggle('opacity')
+            opacityServise.classList.toggle('opacity')
+            opacityPrice.classList.toggle('opacity')
+            opacityFooter.classList.toggle('opacity')
+            opacityHeader.classList.toggle('opacity')
+            bodyScroll.classList.toggle('noscroll')
+
             setTimeout(() => {
               modalCall.addEventListener('click', stopClose)
             window.addEventListener('click',windowClick)
             }, 0);
-
           })
 
 
-        closeModalCall.addEventListener('click',closeModal)
-
-              // modalCall.classList.remove('modalcall-show')
-              // menu.classList.remove('show')
-              // opacityMenu.classList.remove('opacity')
-              // opcityContent.classList.remove('opacity')
-              // opacityBrands.classList.remove('opacity')
-              // opacityServise.classList.remove('opacity')
-              // opacityPrice.classList.remove('opacity')
-              // opacityFooter.classList.remove('opacity')
-              // opacityHeader.classList.remove('opacity')
-              // bodyScroll.classList.remove('noscroll')
-
-
+        closeModalCall.addEventListener('click',windowClick)
        })
-      
 
-       let closeModalFeedbackCB=  () => {
+       let closeModalFeedbackCB = () => {
               modalFeedback.classList.remove('modalfeedback-show')
               menu.classList.remove('show')
               menu.classList.remove('show')
@@ -157,17 +125,7 @@ const toggleMenu = document.querySelector('.burger-toggle'),
             }
 
        feedbackBtn.forEach( (item) => {
-          item.addEventListener('click' , ()=>{
-            modalFeedback.classList.toggle('modalfeedback-show')
-              opacityMenu.classList.toggle('opacity')
-              opcityContent.classList.toggle('opacity')
-              opacityBrands.classList.toggle('opacity')
-              opacityServise.classList.toggle('opacity')
-              opacityPrice.classList.toggle('opacity')
-              opacityFooter.classList.toggle('opacity')
-              opacityHeader.classList.toggle('opacity')
-              bodyScroll.classList.toggle('noscroll')
-              let stop = false
+         let stop = false
             let stopClose = ()=> {
               stop = true
             }
@@ -179,19 +137,25 @@ const toggleMenu = document.querySelector('.burger-toggle'),
               closeModalFeedbackCB()
               modalFeedback.removeEventListener('click', stopClose)
               window.removeEventListener('click',windowClick)
-
             }
-            setTimeout(() => {
-              modalFeedback.addEventListener('click', stopClose)
-            window.addEventListener('click',windowClick)
-            }, 0);
 
+          item.addEventListener('click' , ()=>{
+            modalFeedback.classList.toggle('modalfeedback-show')
+              opacityMenu.classList.toggle('opacity')
+              opcityContent.classList.toggle('opacity')
+              opacityBrands.classList.toggle('opacity')
+              opacityServise.classList.toggle('opacity')
+              opacityPrice.classList.toggle('opacity')
+              opacityFooter.classList.toggle('opacity')
+              opacityHeader.classList.toggle('opacity')
+              bodyScroll.classList.toggle('noscroll')
+              setTimeout(() => {
+               modalFeedback.addEventListener('click', stopClose)
+                window.addEventListener('click',windowClick)
+                }, 0);
           }),
-        closeModalFeedback.addEventListener('click', closeModalFeedbackCB)
+        closeModalFeedback.addEventListener('click', windowClick)
        })
-
-
-
 
       learnMore.addEventListener('click', () => {
          brandsBtn.classList.toggle('transform')
@@ -211,7 +175,6 @@ const toggleMenu = document.querySelector('.burger-toggle'),
 
 
       cartBtn.addEventListener('click', () => {
-        // cartIcon.classList.toggle('transform-icon')
         for (let cart of threeCart) {
           cart.classList.toggle('show-three')
            cartIcon.classList.toggle('transform-icon')
@@ -253,10 +216,6 @@ const toggleMenu = document.querySelector('.burger-toggle'),
             })
           })
         })
-
-
-
-
 
 
 //swiper
