@@ -42,7 +42,10 @@ body {
 @media (min-width: 1001px) {
   body {
     position: relative;
-    max-width: 1400px;
+    max-width: 1400px; } }
+
+@media (min-width: 1400px) {
+  body {
     margin: 0 auto; } }
 
 .btn {
@@ -137,7 +140,6 @@ button:hover {
     z-index: 14;
     width: 440px;
     height: 100%;
-    margin-right: -100px;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1); }
     .modalfeedback-text {
@@ -219,7 +221,6 @@ button:hover {
     min-width: 440px;
     height: 100%;
     background: #fff;
-    margin-right: -100px;
     border: none;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -277,16 +278,15 @@ button:hover {
     font-weight: bold;
     cursor: pointer; }
   .menu-leng {
+    margin-top: 10px;
     margin-left: 24px; }
-  .menu .leng {
-    border: none;
-    background: none;
-    margin-top: 10px; }
-    .menu .leng--active {
-      color: #FF3E79; }
 
-.leng:hover {
-  color: #FF3E79; }
+input[type=radio]:checked + span {
+  font-weight: bold;
+  color: #ff3e79; }
+
+.input-leng {
+  display: none; }
 
 .menu-items a:hover {
   box-shadow: 0 0 3px 3px #ff3e79;
