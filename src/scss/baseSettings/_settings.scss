@@ -25,6 +25,10 @@ body {
   body {
     position: relative;
     max-width: 1400px;
+  }
+}
+@media (min-width: 1400px) {
+  body {
     margin: 0 auto;
   }
 }

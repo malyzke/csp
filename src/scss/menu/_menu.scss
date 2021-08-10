@@ -55,27 +55,19 @@
       cursor: pointer;
     }
     &-leng {
+      margin-top: 10px;
       margin-left: 24px;
     }
-    .leng{
-       border: none;
-       background: none;
-       margin-top: 10px;
-       &--active {
-        color: #FF3E79;
-       }
-    }
+}
 
+input[type=radio]:checked+span {
+  font-weight: bold;
+  color:#ff3e79;
 }
-// .menu-items a:hover{
-//   color: $greycolor;
-// }
-// .menu-items a:focus {
-//   color: $greycolor;
-// }
-.leng:hover {
-color: #FF3E79;
+.input-leng {
+  display: none;
 }
+
 .menu-items a:hover {
     box-shadow: 0 0 3px 3px #ff3e79;
     background-color: #FF3E79;
