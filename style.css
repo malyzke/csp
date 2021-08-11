@@ -288,13 +288,6 @@ input[type=radio]:checked + span {
 .input-leng {
   display: none; }
 
-.menu-items a:hover {
-  box-shadow: 0 0 3px 3px #ff3e79;
-  background-color: #FF3E79;
-  border-radius: 4px;
-  color: #FFFFFF;
-  outline: none; }
-
 .show {
   display: block;
   top: 0; }
@@ -305,10 +298,10 @@ input[type=radio]:checked + span {
 .menu-close {
   display: none; }
 
-.link__active {
+.menu-items__link:hover {
   color: #7E7E82; }
 
-.link__active::before {
+.menu-items__link:focus::before {
   position: relative;
   content: '';
   right: 10px;
