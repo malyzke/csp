@@ -2,9 +2,9 @@ import '../scss/style.scss';
 
 const toggleMenu = document.querySelector('.burger-toggle'),
       menu = document.querySelector('.menu'),
-      contentMore = document.querySelectorAll('.text-more'),
+      contentMore = document.querySelectorAll('.content-half__more'),
       closeMenu = document.querySelector('.burger-close'),
-      contentBtn = document.querySelectorAll('.content-text__more'),//btn
+      contentBtn = document.querySelectorAll('.content-text__btn'),//btn
       learnMore = document.querySelector('.brands-more'), // btn
       cartFive = document.querySelectorAll('.five'),
       brandsBtn = document.querySelector('.brands-icon'),
@@ -23,16 +23,30 @@ const toggleMenu = document.querySelector('.burger-toggle'),
       opacityPrice =  document.querySelector('.price'),
       opacityFooter = document.querySelector('.footer'),
       opacityHeader =document.querySelector('.header'),
-      bodyScroll  = document.querySelector('body'),
-
+      bodyScroll  = document.querySelector('.body'),
       modalCallBtn = document.querySelectorAll('.search'),
       modalCall = document.querySelector('.modalcall'),
       closeModalCall = document.querySelector('.modalcall-close'),
-
-      //tabs
+      menuLink = document.querySelectorAll('.menu-items__link'),
       tabNavItem = document.querySelectorAll('.nav-link__item'),
       tabContentItem = document.querySelectorAll('.content-text');
 
+
+
+    menuLink.forEach((item) => {
+      item.addEventListener('click',() => {
+         menuLink.forEach((val) => {
+        if(val.classList.contains('menu-link__active')) {
+          val.classList.remove('menu-link__active')
+        }
+      })
+        item.classList.add('menu-link__active')
+      })
+
+    })
+
+
+     
 
       tabNavItem.forEach((elem) => {
         elem.addEventListener('click', activeTab)

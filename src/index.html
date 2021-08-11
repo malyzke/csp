@@ -57,17 +57,18 @@
      </button>
      </div>
     </div>
-     <div class="menu-items">
-       <a href="#" class="menu-items__link">Ремонт техники</a>
-       <a href="#" class="menu-items__link link__active">Услуги и сервисы</a>
+     <!-- <div class="menu-items"> -->
+       <a href="#" class="menu-items__link">
+         Ремонт техники</a>
+       <a href="#" class="menu-items__link menu-link__active">Услуги и сервисы</a>
        <a href="#" class="menu-items__link">Корпоративным клиентам</a>
        <a href="#" class="menu-items__link">Продавцам техники</a>
        <a href="#" class="menu-items__link">Партнерам</a>
        <a href="#" class="menu-items__link">Производителям</a>
        <a href="#" class="menu-items__link">Наши сервисные центры</a>
        <a href="#" class="menu-items__link">Контакты</a>
-     </div>
-     <div class="menu-icons">
+     <!-- </div> -->
+     <!-- <div class="menu-icons"> -->
         <button class="menu-icons__call btn search">
        <img src="img/svg/call.svg" alt="">
      </button>
@@ -77,12 +78,12 @@
      <button class="menu-icons__profile btn">
        <img src="img/svg/profile.svg" alt="">
      </button>
-     <a class="menu-email">mail@cps.com</a>
-     <a class="menu-phone">8 800 890 8900</a>
-     </div>
+     <a class="menu-email" href="mailto:mail@cps.com" target="_blank">mail@cps.com</a>
+     <a class="menu-phone" href="tel:8 800 890 8900">8 800 890 8900</a>
+     <!-- </div> -->
      <div class="menu-leng">
          <label>
-          <input type="radio" class="input-leng" name="lang">
+          <input type="radio" class="input-leng " checked name="lang">
           <span>RU</span>
          </label>
          <label>
@@ -150,9 +151,9 @@
 
    <section class="section-content">
    <nav class="nav">
-     <h1 class="nav-heading__min">Услуги и сервисы</h1>
+     <h1 class="nav__min">Услуги и сервисы</h1>
 
-      <div class="nav-header__max">
+      <div class="nav__max">
         <h1 class="nav-heading">Услуги и сервисы</h1>
         <div class="nav-feedback">
           <button class="nav-feedback-button btn repair">
@@ -182,13 +183,13 @@
        Только у нас вы можете отремонтировать свой ноутбук Dell
        с официальной гарантией производителя.
        </p>
-       <p class="text-more">
+       <p class="content-half__more">
     Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
         Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
               Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
 
   </p>
-       <button class="content-text__more btn">
+       <button class="content-text__btn btn">
        <img class="text-img" src="img/svg/more.svg" alt="">
             Показать всё
       </button>
@@ -199,13 +200,13 @@
        Никакого упадка нет, да и быть не может. Просто цензуру смягчили, а частию, слава богу, и вовсе упразднили, и то,
         что раньше мы слышали в пивных и подворотнях, сегодня услаждает наш слух, доносясь с эстрады и с телеэкранов.
        </p>
-       <p class="text-more">
+       <p class="content-half__more">
         Мы склонны
         считать это наступлением бескультурья и упадком Языка, но ведь бескультурье, как и всякая разруха, не в книгах и не на театральных подмостках,
         оно в душах и в головах. А с последними, на мой взгляд, ничего существенного за последние годы не произошло.
 
   </p>
-       <button class="content-text__more btn">
+       <button class="content-text__btn btn">
        <img class="text-img" src="img/svg/more.svg" alt="">
             Показать всё
       </button>
@@ -215,12 +216,12 @@
      <p class="content-half">Разговоры об упадке вообще и Языка в частности — это, по сути, результат отсутствия ясных указаний сверху.
        Появятся соответствующие указания — и упадок прекратится как бы сам собой, тут же сменившись каким-нибудь «новым расцветом»
        </p>
-       <p class="text-more">
+       <p class="content-half__more">
     Литература благополучно процветает, оставшись, наконец,
     почти без цензуры и в сени либеральных законов, касающихся книгоиздания. Читатель избалoван до предела.
 
   </p>
-       <button class="content-text__more btn">
+       <button class="content-text__btn btn">
        <img class="text-img" src="img/svg/more.svg" alt="">
             Показать всё
       </button>
@@ -232,12 +233,12 @@
        Ежегодно появляется несколько десятков книг такого уровня значимости, что, появись любая из них на прилавках лет 25 назад, она тут же стала бы сенсацией года,
        а сегодня вызывает лишь снисходительно-одобрительное ворчание критики.
        </p>
-       <p class="text-more">
+       <p class="content-half__more">
     Разговоры о пресловутом «кризисе литературы» не затихают, общественность требует
     немедленного появления новых булгаковых, чеховых, толстых, как водится, забывая при этом,
     что любой классик — это обязательно «продукт времени»
   </p>
-       <button class="content-text__more btn">
+       <button class="content-text__btn btn">
        <img class="text-img" src="img/svg/more.svg" alt="">
             Показать всё
       </button>
@@ -246,12 +247,12 @@
      <p class="content-half">
        Не надо тянуть дерево за ветки вверх: оно от этого быстрее не вырастет. Впрочем, в разговорах о кризисе ничего плохого нет: пользы от них маловато, но и вреда ведь тоже не наблюдается.
        </p>
-       <p class="text-more">
+       <p class="content-half__more">
     Разговоры о пресловутом «кризисе литературы» не затихают, общественность требует
     немедленного появления новых булгаковых, чеховых, толстых, как водится, забывая при этом,
     что любой классик — это обязательно «продукт времени»
   </p>
-       <button class="content-text__more btn">
+       <button class="content-text__btn btn">
        <img class="text-img" src="img/svg/more.svg" alt="">
             Показать всё
       </button>
@@ -263,12 +264,12 @@
      <p class="content-half">
        А Язык, как и прежде, живёт своею собственной жизнью, медленной и непостижимой, непрерывно меняясь и при этом всегда оставаясь самим собой.
        </p>
-       <p class="text-more">
+       <p class="content-half__more">
     Разговоры о пресловутом «кризисе литературы» не затихают, общественность требует
     немедленного появления новых булгаковых, чеховых, толстых, как водится, забывая при этом,
     что любой классик — это обязательно «продукт времени»
   </p>
-       <button class="content-text__more btn">
+       <button class="content-text__btn btn">
        <img class="text-img" src="img/svg/more.svg" alt="">
             Показать всё
       </button>
@@ -307,7 +308,7 @@
     <div class="swiper-slide slide ">
       <div class=" cart">
       <img class="cart-brand" src="img/brands/samsung.svg" alt="">
-        <img  class="arrow" src="img/brands/arrow.svg" alt="" class="lenovo-brand__arrow">
+        <img  class="arrow" src="img/brands/arrow.svg" alt="" class="arrow">
       </div>
     </div>
 
@@ -448,11 +449,6 @@
         <img src="img/brands/arrow.svg" alt="" class="arrow">
       </div>
 
-<!--
-      <div class="apple cart">
-        <img src="img/brands/apple.svg" alt="" class="apple-brand">
-        <img src="img/brands/arrow.svg" alt="" class="arrow">
-      </div> -->
 
     </div>
      <button class="brands-more btn">
@@ -774,10 +770,10 @@
 
       <footer >
             <div class="footer" >
-        <div class="year shrink"><a href=""></a>© 2019 CPS <br>
-Разработано командой Apesong </div>
-        <div class="politic shrink">Политика конфиденциальности</div>
-        <div class="information shrink">
+        <div class="footer-year shrink"><a href=""></a>© 2019 CPS <br>
+          Разработано командой Apesong </div>
+        <div class="footer-politic shrink">Политика конфиденциальности</div>
+        <div class="footer-information shrink">
           Информация, размещенная на данной странице, не является публичной офертой
         </div>
         </div>
