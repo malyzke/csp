@@ -68,13 +68,7 @@ input[type=radio]:checked+span {
   display: none;
 }
 
-.menu-items a:hover {
-    box-shadow: 0 0 3px 3px #ff3e79;
-    background-color: #FF3E79;
-    border-radius: 4px;
-    color: #FFFFFF;
-    outline: none;
-}
+
 
 .show {
  display: block;
@@ -89,10 +83,10 @@ input[type=radio]:checked+span {
   display: none;
 }
 
-.link__active {
+.menu-items__link:hover{
   color: $greycolor;
 }
-.link__active::before {
+.menu-items__link:focus::before {
   position: relative;
   content: '';
   right: 10px;
