@@ -103,6 +103,7 @@ span{
 .menu-link__active::before {
   position: relative;
   content: '';
+  color:$greycolor;
   right: 10px;
   top: -5px;
   display: inline-block;

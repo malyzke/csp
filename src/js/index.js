@@ -23,7 +23,7 @@ const toggleMenu = document.querySelector('.burger-toggle'),
       opacityPrice =  document.querySelector('.price'),
       opacityFooter = document.querySelector('.footer'),
       opacityHeader =document.querySelector('.header'),
-      bodyScroll  = document.querySelector('.body'),
+      bodyScroll  = document.querySelector('body'),
       modalCallBtn = document.querySelectorAll('.search'),
       modalCall = document.querySelector('.modalcall'),
       closeModalCall = document.querySelector('.modalcall-close'),
@@ -33,20 +33,20 @@ const toggleMenu = document.querySelector('.burger-toggle'),
 
 
 
-    menuLink.forEach((item) => {
-      item.addEventListener('click',() => {
-         menuLink.forEach((val) => {
-        if(val.classList.contains('menu-link__active')) {
-          val.classList.remove('menu-link__active')
-        }
-      })
-        item.classList.add('menu-link__active')
-      })
+    // menuLink.forEach((item) => {
+    //   item.addEventListener('click',() => {
+    //      menuLink.forEach((val) => {
+    //     if(val.classList.contains('menu-link__active')) {
+    //       val.classList.remove('menu-link__active')
+    //     }
+    //   })
+    //     item.classList.add('menu-link__active')
+    //   })
 
-    })
+    // })
 
 
-     
+
 
       tabNavItem.forEach((elem) => {
         elem.addEventListener('click', activeTab)
@@ -230,6 +230,17 @@ const toggleMenu = document.querySelector('.burger-toggle'),
             })
           })
         })
+menuLink.forEach((item) => {
+      item.addEventListener('click',() => {
+         menuLink.forEach((val) => {
+        if(val.classList.contains('menu-link__active')) {
+          val.classList.remove('menu-link__active')
+        }
+      })
+        item.classList.add('menu-link__active')
+      })
+
+    })
 
 
 //swiper
